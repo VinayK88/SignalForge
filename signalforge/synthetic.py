@@ -52,23 +52,27 @@ def generate_events(n: int = 2400, seed: int = RANDOM_STATE, adversarial_shift: 
             )
         )
 
+        # The latent score intentionally contains learnable adversarial structure.
+        # Small Gaussian perturbation preserves overlap without turning the label
+        # into a nearly-random Bernoulli draw from a weak signal.
         linear = (
-            -3.0
-            + 1.05 * (account_age_days < 3.0)
-            + 0.72 * (device_accounts >= 5)
-            + 0.68 * (payment_accounts >= 4)
-            + 0.48 * (shipping_accounts >= 6)
-            + 0.65 * (velocity >= 4)
-            + 0.76 * (refund_rate >= 0.30)
-            + 0.55 * (distance >= 900.0)
-            + 0.82 * new_device
-            + 0.30 * digital_goods
-            + 0.76 * (risky_neighbor_ratio >= 0.35)
-            + 0.25 * (order_amount >= 900.0)
-            + float(rng.normal(0.0, 0.55))
+            -3.2
+            + 1.55 * (account_age_days < 3.0)
+            + 1.15 * (device_accounts >= 5)
+            + 1.05 * (payment_accounts >= 4)
+            + 0.78 * (shipping_accounts >= 6)
+            + 1.10 * (velocity >= 4)
+            + 1.25 * (refund_rate >= 0.30)
+            + 0.82 * (distance >= 900.0)
+            + 1.15 * new_device
+            + 0.42 * digital_goods
+            + 1.20 * (risky_neighbor_ratio >= 0.35)
+            + 0.55 * (order_amount >= 900.0)
+            + float(rng.normal(0.0, 0.28))
         )
         fraud_probability = _sigmoid(linear)
-        fraud_label = int(rng.random() < fraud_probability)
+        latent_observation = fraud_probability + float(rng.normal(0.0, 0.045))
+        fraud_label = int(latent_observation >= 0.40)
         fraud_loss = float(
             fraud_label
             * order_amount
