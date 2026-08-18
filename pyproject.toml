@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "signalforge"
+version = "0.1.0"
+description = "Synthetic fraud and risk decisioning platform with calibrated ML, graph signals, drift monitoring, and cost-aware actions"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26,<3",
+  "scikit-learn==1.7.2",
+  "networkx>=3.2,<4"
+]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1"]
+
+[project.scripts]
+signalforge = "signalforge.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["signalforge*"]
