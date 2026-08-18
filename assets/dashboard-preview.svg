@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="780" viewBox="0 0 1440 780">
+  <rect width="1440" height="780" fill="#0b1020"/>
+  <rect x="48" y="42" width="1344" height="696" rx="22" fill="#111827" stroke="#334155"/>
+  <text x="82" y="92" fill="#f8fafc" font-family="Arial" font-size="30" font-weight="700">SignalForge · Fraud &amp; Risk Decisioning</text>
+  <text x="82" y="122" fill="#94a3b8" font-family="Arial" font-size="16">Synthetic dashboard preview · calibrated ML · graph risk · expected loss · decision health</text>
+
+  <g font-family="Arial">
+    <rect x="82" y="154" width="300" height="132" rx="16" fill="#172033"/>
+    <text x="106" y="188" fill="#94a3b8" font-size="15">CALIBRATED FRAUD RISK</text>
+    <text x="106" y="236" fill="#f8fafc" font-size="34" font-weight="700">High-risk sample</text>
+    <text x="106" y="266" fill="#a7f3d0" font-size="15">Probability + calibration tracked</text>
+
+    <rect x="402" y="154" width="300" height="132" rx="16" fill="#172033"/>
+    <text x="426" y="188" fill="#94a3b8" font-size="15">GRAPH / RING SIGNAL</text>
+    <text x="426" y="236" fill="#f8fafc" font-size="34" font-weight="700">Shared entities</text>
+    <text x="426" y="266" fill="#fde68a" font-size="15">Device · payment · address reach</text>
+
+    <rect x="722" y="154" width="300" height="132" rx="16" fill="#172033"/>
+    <text x="746" y="188" fill="#94a3b8" font-size="15">EXPECTED LOSS</text>
+    <text x="746" y="236" fill="#f8fafc" font-size="34" font-weight="700">Cost modeled</text>
+    <text x="746" y="266" fill="#bfdbfe" font-size="15">Regression + action economics</text>
+
+    <rect x="1042" y="154" width="300" height="132" rx="16" fill="#172033"/>
+    <text x="1066" y="188" fill="#94a3b8" font-size="15">DECISION</text>
+    <text x="1066" y="236" fill="#f8fafc" font-size="34" font-weight="700">REVIEW</text>
+    <text x="1066" y="266" fill="#fca5a5" font-size="15">Lowest modeled expected cost</text>
+
+    <rect x="82" y="312" width="620" height="252" rx="16" fill="#172033"/>
+    <text x="108" y="350" fill="#f8fafc" font-size="20" font-weight="700">Decision evidence</text>
+    <text x="108" y="390" fill="#cbd5e1" font-size="16">• Calibrated classifier: fraud probability</text>
+    <text x="108" y="424" fill="#cbd5e1" font-size="16">• Isolation Forest: behavioral anomaly percentile</text>
+    <text x="108" y="458" fill="#cbd5e1" font-size="16">• Graph model: shared-entity / ring risk</text>
+    <text x="108" y="492" fill="#cbd5e1" font-size="16">• Expected-loss regressor: financial exposure</text>
+    <text x="108" y="526" fill="#cbd5e1" font-size="16">• Active learning: analyst-review value</text>
+
+    <rect x="722" y="312" width="620" height="252" rx="16" fill="#172033"/>
+    <text x="748" y="350" fill="#f8fafc" font-size="20" font-weight="700">Adversarial monitoring</text>
+    <text x="748" y="390" fill="#cbd5e1" font-size="16">Population PSI</text>
+    <rect x="900" y="378" width="340" height="14" rx="7" fill="#263247"/><rect x="900" y="378" width="226" height="14" rx="7" fill="#60a5fa"/>
+    <text x="748" y="434" fill="#cbd5e1" font-size="16">Model / anomaly disagreement</text>
+    <rect x="970" y="422" width="270" height="14" rx="7" fill="#263247"/><rect x="970" y="422" width="128" height="14" rx="7" fill="#fbbf24"/>
+    <text x="748" y="478" fill="#cbd5e1" font-size="16">Review-queue uncertainty</text>
+    <rect x="948" y="466" width="292" height="14" rx="7" fill="#263247"/><rect x="948" y="466" width="178" height="14" rx="7" fill="#a78bfa"/>
+    <text x="748" y="526" fill="#94a3b8" font-size="14">Monitoring flags evidence; it does not auto-retrain policy.</text>
+
+    <rect x="82" y="590" width="1260" height="106" rx="16" fill="#0f172a" stroke="#263247"/>
+    <text x="108" y="628" fill="#94a3b8" font-size="15">DECISION PIPELINE</text>
+    <text x="108" y="666" fill="#f8fafc" font-size="18">Event → Feature Contract → Calibrated ML → Graph + Anomaly → Expected Loss → Cost Optimization → ALLOW / REVIEW / BLOCK → Feedback</text>
+    <text x="108" y="690" fill="#64748b" font-size="13">Illustrative synthetic dashboard. No production/customer metrics.</text>
+  </g>
+</svg>
